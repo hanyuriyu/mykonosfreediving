@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mykonos Freediving</title>
+
+  <style>
+    :root{
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Arial, Helvetica, sans-serif;
+      --ink: #1a1a1a;
+      --muted: rgba(26,26,26,.70);
+      --welcome: rgba(150, 120, 80, .95);
+      --panel: rgba(255,255,255,.86);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body { background: #000; }
+
+    .hero {
+      min-height: 100vh;
+      background-color: #111; /* fallback */
+      background-image: url("images/mykonos.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: stretch;
+    }
+
+    .panel {
+      width: min(520px, 42vw);
+      min-width: 320px;
+      background: var(--panel);
+      padding: clamp(28px, 5vw, 56px);
+      display: flex;
+      align-items: center;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.20);
+    }
+
+    .panel-inner {
+      width: 100%;
+      text-align: center;
+    }
+
+    .welcome{
+      font-family: var(--sans);
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      color: var(--welcome);
+      margin: 0 0 18px 0;
+    }
+
+    h1{
+      font-family: var(--serif);
+      font-weight: 400;
+      color: var(--ink);
+      font-size: clamp(2.6rem, 4.5vw, 4.1rem);
+      line-height: 1.05;
+      margin: 0 0 18px 0;
+    }
+
+    .sub{
+      font-family: var(--sans);
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin: 0;
+      max-width: 34ch;
+      margin-inline: auto;
+    }
+
+    .coming-soon{
+      margin-top: 18px;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(26,26,26,0.55);
+    }
+
+    .contact-link{
+      margin-top: 14px;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+    }
+
+    .contact-link a{
+      color: rgba(26,26,26,0.7);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(26,26,26,0.3);
+      padding-bottom: 2px;
+      transition: all 0.2s ease;
+    }
+
+    .contact-link a:hover{
+      color: rgba(26,26,26,0.9);
+      border-bottom-color: rgba(26,26,26,0.6);
+    }
+
+    @media (max-width: 820px){
+      .hero{
+        justify-content: center;
+        align-items: flex-end;
+      }
+      .panel{
+        width: calc(100% - 28px);
+        margin: 14px;
+        min-width: unset;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="panel">
+      <div class="panel-inner">
+        <p class="welcome">WELCOME</p>
+
+        <h1>Mykonos<br>Freediving</h1>
+
+        <p class="sub">
+          Explore the real Mykonos and its secret beaches for fun, a swim,
+          snorkeling and freediving.
+        </p>
+
+        <p class="coming-soon">More info soon</p>
+
+        <p class="contact-link">
+          <a href="mailto:hob122020&#64;gmail&#46;com">
+            For questions, click here
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
